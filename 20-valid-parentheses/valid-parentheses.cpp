@@ -4,21 +4,20 @@ public:
         stack<char> st;
         for (int i = 0; i < s.length(); i++) 
         {
-            char ch = s[i];
-            if (ch == '(' || ch == '{' || ch == '[') 
+            if (s[i] == '(' || s[i] == '{' || s[i] == '[') 
             {
-                st.push(ch);
+                st.push(s[i]);
             }
-            else if (ch == ')' || ch == '}' || ch == ']') 
+            else if (s[i] == ')' || s[i] == '}' || s[i] == ']') 
             {
                 if (st.empty()) 
                 {
                     return false;
                 }
 
-                if ((ch == ')' && st.top() != '(' ||
-                     ch == '}' && st.top() != '{' ||
-                     ch == ']' && st.top() != '['))
+                if ((s[i] == ')' && st.top() != '(' ||
+                     s[i] == '}' && st.top() != '{' ||
+                     s[i] == ']' && st.top() != '['))
                 {
                     return false;
                 }
