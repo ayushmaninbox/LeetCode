@@ -7,7 +7,6 @@ public:
             while (j < m && haystack[i+j] == needle[j]) {
                 j++;
             }
-
             while (j == m) {
                 return i;
             }
@@ -15,3 +14,12 @@ public:
         return -1;
     }
 };
+
+
+
+// class Solution {
+// public:
+//     int strStr(string haystack, string needle) {
+//         return haystack.find(needle);
+//     }
+// };
